@@ -1,24 +1,39 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
-struct VECT2D //A struct for 2D vectors
-{
-	double x; //double datatype used to allow for both whole numbers and decimal numbers to be used
-	double y;
-};
-
-struct VECT3D //A struct for 3D vectors
-{
-	double x;
-	double y;
-	double z;
-};
+//struct VECT2D //A struct for 2D vectors
+//{
+//	double x; //double datatype used to allow for both whole numbers and decimal numbers to be used
+//	double y;
+//};
+//
+//struct VECT3D //A struct for 3D vectors
+//{
+//	double x;
+//	double y;
+//	double z;
+//};
 
 template <class T>
 class Vector		//Vector class to perform vector equations
 {
 public:
-	Vector addition2D(T, T);										//Function for adding two 2D vectors together
+	Vector(T);
+	//double x;
+	//double y;
+	//double z;
+	T x, y, z;
+	template <typename T>
+	Vector<T> operator+(T other) 
+	{
+		T temp;
+		temp.x = x + other.x;
+		temp.y = y + other.y;
+		temp.z = z + other.z;
+
+		return temp;
+	}
+	//Vector addition2D(T, T);										//Function for adding two 2D vectors together
 	Vector subtraction2D(T, T);										//Function for subtracting one 2D vector from another 2D vector
 	T addsum2D;														//Stores the results of the 2D addition function
 	T subsum2D;														//Stores the results of the 2D subtraction function
@@ -36,6 +51,14 @@ public:
 private:
 
 };
+
+template <typename T>
+Vector<T>::Vector(T vect)
+{
+	x = 0;
+	y = 0;
+	z = 0;
+}
 
 template <typename T>
 Vector<T> Vector<T>::addition2D(T one, T two)
