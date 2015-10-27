@@ -21,11 +21,20 @@ public:
 	template <typename T>
 	Vector<T> operator-(Vector<T> other)
 	{
-
 		Vector<T> temp;
 		temp.x = x - other.x;
 		temp.y = y - other.y;
 		temp.z = z - other.z;
+
+		return temp;
+	}
+	template <typename T>
+	Vector<T> operator*(Vector<T> other)
+	{
+		Vector<T> temp;
+		temp.x = x * other.x;
+		temp.y = y * other.y;
+		temp.z = z * other.z;
 
 		return temp;
 	}
@@ -59,10 +68,7 @@ Vector<T>::Vector(T a, T b, T c)
 template <typename T>
 T Vector<T>::Magnitude()
 {
-	Vector<T> temp;
-	temp.x = x * x;
-	temp.y = y * y;
-	temp.z = z * z;
+	Vector<T> temp = *this * *this;
 	magnitude = sqrt(temp.x + temp.y + temp.z);
 
 	return magnitude;
