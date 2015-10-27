@@ -40,7 +40,6 @@ public:
 	}
 	T magnitude;
 	T Magnitude();
-	T normx, normy, normz, normM;
 	Vector<T> Normalize();
 	T DotProduct(Vector<T>);
 	Vector<T> CrossProduct(Vector<T>);
@@ -77,12 +76,13 @@ T Vector<T>::Magnitude()
 template <typename T>
 Vector<T> Vector<T>::Normalize()
 {
-	normx = x / magnitude;
-	normy = y / magnitude;
-	normz = z / magnitude;
-	normM = magnitude / magnitude;
+	Vector<T> temp;
+	temp.x = x / magnitude;
+	temp.y = y / magnitude;
+	temp.z = z / magnitude;
+	temp.magnitude = magnitude / magnitude;
 
-	return *this;
+	return temp;
 }
 
 template <typename T>
