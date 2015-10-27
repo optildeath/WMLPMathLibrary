@@ -5,11 +5,11 @@ template <class T>
 class Vector		//Vector class to perform vector equations
 {
 public:
-	Vector<T>();
-	Vector<T>(T, T, T);
-	T x, y, z;
+	Vector<T>();							//Default constructor for the Vector class
+	Vector<T>(T, T, T);						//Manual constructor for the Vector class
+	T x, y, z;								//Creates the x, y, and z variables to represent the x, y, and z values for Vectors
 	template <typename T>
-	Vector<T> operator+(Vector<T> other) 
+	Vector<T> operator+(Vector<T> other)	//Overloads the addition operator to allow for Vectors to be added together
 	{
 		Vector<T> temp;
 		temp.x = x + other.x;
@@ -19,7 +19,7 @@ public:
 		return temp;
 	}
 	template <typename T>
-	Vector<T> operator-(Vector<T> other)
+	Vector<T> operator-(Vector<T> other)	//Overloads the subtraction operator to allow a Vector to subtract the values of another Vector
 	{
 		Vector<T> temp;
 		temp.x = x - other.x;
@@ -29,7 +29,7 @@ public:
 		return temp;
 	}
 	template <typename T>
-	Vector<T> operator*(Vector<T> other)
+	Vector<T> operator*(Vector<T> other)	//Overloads the multiplication operator to allow for Vectors to be multiplied by each other
 	{
 		Vector<T> temp;
 		temp.x = x * other.x;
@@ -38,11 +38,11 @@ public:
 
 		return temp;
 	}
-	T magnitude;
-	T Magnitude();
-	Vector<T> Normalize();
-	T DotProduct(Vector<T>);
-	Vector<T> CrossProduct(Vector<T>);
+	T magnitude;							//Creates the magnitude variable to hold the value of a Vector's magnitude
+	T Magnitude();							//Multiplies the Vector by itself, adds the resulting x, y, & z values together and retrieves the square root of the result to find the magnitude
+	Vector<T> Normalize();					//Divides the Vectors x, y, z, & magnitude by it's magnitude and assigns the results to a temporary Vector for assinging the values to a Vector
+	T DotProduct(Vector<T>);				//Gets the dot product of two Vectors and stores it in a temporary variable
+	Vector<T> CrossProduct(Vector<T>);		//Gets the cross product of two Vectors and stores it in a temporary Vector
 
 private:
 
