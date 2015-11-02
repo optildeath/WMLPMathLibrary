@@ -119,7 +119,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Templet.h" />
+    <ClInclude Include="Vecter3.h" />
+    <ClInclude Include="Vecter2.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />

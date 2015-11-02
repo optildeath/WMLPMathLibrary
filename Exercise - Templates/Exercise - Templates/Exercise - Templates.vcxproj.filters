@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Templet.h">
+    <ClInclude Include="Vecter3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vecter2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
