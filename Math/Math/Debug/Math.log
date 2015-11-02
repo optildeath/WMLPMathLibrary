@@ -1,0 +1,13 @@
+﻿Build started 10/27/2015 5:49:24 PM.
+     1>Project "C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\Math\Math\Math.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\Math.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\Math\Debug\Math.lib" /NOLOGO Debug\Source.obj
+         Math.vcxproj -> C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\Math\Debug\Math.lib
+     1>Done Building Project "C:\Users\logan.pletcher\Documents\Visual Studio 2015\Projects\Math\Math\Math.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.89
